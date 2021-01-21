@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Job Application</title>
+</head>
+<body>
+
+<h2>UW TA Application</h2>
+
+<form action="http://gclass.alexburner.com/formtest.php" method="post">
+
+	<fieldset>
+		<legend>Account Information</legend>
+		<div class="field">
+			<label>UW Email:</label> 
+			<input type="text" name="email">
+		</div>
+		<div class="field">
+			<label>UW NetID:</label> 
+			<input type="text" name="netid">
+		</div>
+		<div class="field">
+			<label>Password:</label> 
+			<input type="password" name="password">
+		</div>
+		<div class="field">
+			<label>Repeat password:</label> 
+			<input type="password" name="password_repeated">
+		</div>
+	</fieldset>
+
+	<fieldset>
+		<legend>Personal Information</legend>
+		<div class="field">
+			Photo: <input type="file" name="profilepic" accept="image/*"/>
+		</div>
+		<div class="field">
+			<label>First Name:</label> 
+			<input type="text" name="firstname">
+			<label>Last Name:</label>
+			<input type="text" name="lastname">
+		</div>
+		<div class="field">
+			<label>GPA:</label> 
+			<input type="text" name="gpa">
+        </div>
+        <div class="field">
+			<label>Specific Grades:</label>
+			<table>
+				<tr>
+					<td></td>
+					<th>CSE 143</th>
+					<th>MATH 126</th>
+					<th>INFO 101</th>
+				</tr>
+				<tr>
+					<th>GPA</th>
+					<td><input type="text" size="5" name="cse143"></td>
+					<td><input type="text" size="5" name="math126"></td>
+					<td><input type="text" size="5" name="info101"></td>
+				</tr>
+			</table><br>
+		</div>
+		<div class="field">
+			<label>Major:</label> 
+			<input type="text" name="major">
+		</div>
+		<div class="field">
+			<label>Where You're Currently Located:</label> 
+			<input type="text" name="location">
+		</div>
+		<div class="field">
+			<label>Grade Level (by year, NOT by credits):</label> 
+			<select name="grade">
+				<option value="" selected="true">Choose a Grade Level</option>
+				<option value="freshman">Freshman</option>
+				<option value="sophomore">Sophomore</option>
+				<option value="jr">Junior</option>
+				<option value="sr">Senior</option>
+			</select>
+		</div>
+	</fieldset>
+
+	<fieldset>
+		<legend>Availability</legend>
+		<div class="field">
+			<label>Are you legally able to be employed in this country?</label> 
+			<input type="radio" name="legal" value="yes">Yes
+			<input type="radio" name="legal" value="no">No
+		</div>
+		<div class="field">
+			<label>Which tasks do you have experience in? (check all that apply)</label>
+			<ul>
+				<li><input type="checkbox" name="section" value="section">Teaching Section</li>
+				<li><input type="checkbox" name="officehours" value="officehours">Hosting Office Hours</li>
+				<li><input type="checkbox" name="infra" value="infra">Course Infrastructure</li>
+				<li><input type="checkbox" name="grading" value="grading">Grading</li>
+			</ul>
+		</div>
+		<div class="field">
+			<label>Earliest Start Date:</label>
+			<input type="date" name="start_date">
+		</div>
+		<div class="field">
+			<label>How many hours do you want to work per week?:</label>
+			<input type="number" name="hoursperweek" min="1" max="20">
+		</div>
+		<div class="field">
+			<label>Quarter You'd Like to TA:</label> 
+			<select name="quarter">
+				<option value="" selected="true">Choose a Quarter</option>
+				<option value="autumn">Autumn</option>
+				<option value="winter">Winter</option>
+				<option value="spring">Spring</option>
+				<option value="summer">Summer</option>
+			</select>
+		</div>
+		<div class="field">
+			
+			<label>Hours available</label>
+			<table>
+				<tr>
+					<td></td>
+					<th>Sun</th>
+					<th>Mon</th>
+					<th>Tue</th>
+					<th>Wed</th>
+					<th>Thu</th>
+					<th>Fri</th>
+					<th>Sat</th>
+				</tr>
+				<tr>
+					<th>From</th>
+					<td><input type="time" size="5" name="su_from"></td>
+					<td><input type="time" size="5" name="mo_from"></td>
+					<td><input type="time" size="5" name="tu_from"></td>
+					<td><input type="time" size="5" name="we_from"></td>
+					<td><input type="time" size="5" name="th_from"></td>
+					<td><input type="time" size="5" name="fr_from"></td>
+					<td><input type="time" size="5" name="sa_from"></td>
+				</tr>
+				<tr>
+					<th>Until</th>
+					<td><input type="time" size="5" name="su_until"></td>
+					<td><input type="time" size="5" name="mo_until"></td>
+					<td><input type="time" size="5" name="tu_until"></td>
+					<td><input type="time" size="5" name="we_until"></td>
+					<td><input type="time" size="5" name="th_until"></td>
+					<td><input type="time" size="5" name="fr_until"></td>
+					<td><input type="time" size="5" name="sa_until"></td>
+				</tr>
+			</table>
+		</div>
+	</fieldset>
+
+	<fieldset>
+		<legend>Personal Statement</legend>
+		<div class="field">
+			<label>Do you have any prior teaching experience?</label><br>
+			<textarea name="experience" rows="6" cols="60"></textarea>
+		</div>
+		<div class="field">
+			<label>Why are you interested in teaching?</label><br>
+			<textarea name="teaching_interest" rows="6" cols="60"></textarea>
+		</div>
+		<div class="field">
+			<label>Why did you choose your major?</label><br>
+			<textarea name="major_interest" rows="6" cols="60"></textarea>
+		</div>
+	</fieldset>
+
+	<input type="submit" value="Submit form">
+
+</form>
+</body>
+</html>
